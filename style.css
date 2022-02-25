@@ -15,6 +15,7 @@
 /*#0f0f0f 2c2c2c  #212121*/
 body {
     background: #181818;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -29,7 +30,7 @@ img {
 
 
 .modal-full {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 997;
     height: 100vh;
@@ -39,11 +40,67 @@ img {
 
 .fundo {
     width: 100%;
-    background-color: aqua;
     position: fixed;
     z-index: 998;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 999;
+    background-color: #000;
+    height: 100vh;
+}
+
+.modal div {
+    width: 75%;
+    max-width: 450px;
+    color: #fff;
+}
+
+.modal div .close {
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: flex-end;
+    padding: 7px;
+    font-weight: 700;
+    font-size: 25px;
+    background-color: #fcbd2e;
+    color: #2c2c2c;
+    text-align: center;
+    float: right;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.modal div section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.modal div section a {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #181818;
+    background-color: #fcbd2e;
+}
+
+.modal div section a ion-icon {
+    margin-right: 5px;
+    font-size: 23px;
 }
 
 
@@ -136,10 +193,10 @@ img {
 #stories-imgs ul li button {
     width: 100%;
     background-color: #fcbd2e;
-    padding: 7px;
+    padding: 8px;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    font-weight: 600;
+    font-weight: 700;
     color: #181818;
     cursor: pointer;
 }
@@ -167,11 +224,15 @@ img {
     justify-content: center;
     color: #fcbd2e;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     background: #2c2c2c;
     text-align: center;
     font-size: 14px;
+}
+
+#list-btns li a:hover {
+    background-color: #000;
 }
 
 #list-btns li a ion-icon {
